@@ -7,7 +7,7 @@
 pragma solidity ^0.8.0;
 
 
-contrsct AccessControlExample {
+contract AccessControlExample {
     uint private privateValue;
     uint internal internalValue;
     uint public publicValue;
