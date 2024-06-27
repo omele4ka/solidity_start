@@ -28,7 +28,8 @@ contract EventExample {
 
     // функция для изменения статуса задач и вызова события
     function updateTaskStatus(uint _taskId, string memory _newStatus) public {
-        tasks[_taskId] = _newStatus;
+        require(_taskId < tasks.length, "Task ID does not exist");
+        tasks[_taskId].status = _newStatus;
         emit TaskStatusChanged(_taskId, _newStatus);
     }
 }

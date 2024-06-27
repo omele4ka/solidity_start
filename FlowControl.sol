@@ -16,34 +16,26 @@ contract FlowControlExample {
         }
     }
 
-    function getDay(uint day) public pure returns (sting memory) {
-        switch (day) {
-            case 1:
-                result = "Sunday";
-                break;
-            case 2: 
-                result = "Monday";
-                break; 
-            case 3: 
-                result = "Tuesday";
-                break;
-            case 4: 
-                result = "Wednesday";
-                break;
-            case 5: 
-                result = "Thursday";
-                break;
-            case 6: 
-                result = "Friday";
-                break;
-            case 7: 
-                result = "Saturday";
-                break;
-            default: 
-                result = "There's no such day of a week";
-                break;
+    function getDay(uint day) public pure returns (string memory) {
+        string memory result;
+        if (day == 1) {
+            result = "Sunday";
+        } else if (day == 2) {
+            result = "Monday";
+        } else if (day == 3) {
+            result = "Tuesday";
+        } else if (day == 4) {
+            result = "Wednesday";
+        } else if (day == 5) {
+            result = "Thursday";
+        } else if (day == 6) {
+            result = "Friday";
+        } else if (day == 7) {
+            result = "Saturday";
+        } else {
+            result = "There's no such day of a week";
         }
-        return result
+        return result;
     }
 }
 
